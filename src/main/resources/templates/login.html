@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.css" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+
+    <!--
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-grid.css" />
+        <link rel="stylesheet" href="css/bootstrap-reboot.css" />
+        <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
+        -->
+</head>
+<body>
+    <div class="container">
+    <div class="row clearfix">
+        <div class="col-md-3 column">
+            <form role="form" method="POST" th:action="@{/userLogin}" th:object="${user}">
+
+                     <label for="username">Name</label><input type="text" class="form-control" id="username" th:field="*{name}" />
+      
+                     <label for="password">Password</label><input type="password" class="form-control" id="password" th:field="*{password}" />
+       
+
+           <button type="submit" class="btn btn-default">Sign in</button>
+            </form>
+            
+            <ul class="nav nav-pills">
+                 <li role="presentation"><a href="register.html" class="href" target="_blank">Sign up</a></li>
+            </ul>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>
